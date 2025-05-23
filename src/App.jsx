@@ -5,6 +5,7 @@ import ContactPage from "./pages/ContactPage";
 import PersonalPage from "./pages/PersonalPage";
 import OpenAccountPage from "./pages/OpenAccountPage";
 import BusinessPage from "./pages/BusinessPage";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="account" element={<OpenAccountPage />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
