@@ -3,8 +3,8 @@ import Button from "./Button";
 
 function Persona() {
   return (
-    <div className="w-full bg-gray-600 mt-15 h-screen">
-      <section className=" text-white grid grid-cols-1 md:grid-cols-2 md:h-screen">
+    <div className="w-full bg-gray-600 mt-15">
+      <section className=" text-white grid grid-cols-1 md:grid-cols-2 lg:h-screen">
         <div className="md:mx-auto grid md:items-center md:justify-center">
           <img
             src="/images/248068-1920x1080-desktop-full-hd-money-heist-background-photo.jpg"

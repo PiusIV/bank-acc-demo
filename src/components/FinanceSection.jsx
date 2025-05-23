@@ -28,7 +28,10 @@ function FinanceSection() {
               individuals, businesses, coperate organisations of any kind and
               families to make informed financial decisions.
             </p>
-            <ul className="flex justify-between text-lg mt-5 text-amber-600 font-bold">
+            <h1 className="text-center text-gray-800 font-bold font-mono text-2xl">
+              Our Partners
+            </h1>
+            <ul className="flex gap-2 justify-between text-lg mt-5 text-amber-600 font-bold p-2 overflow-hidden flex-wrap">
               <li>🏮 Layers</li>
               <li>🔕 Quotient</li>
               <li>🟢 Circooles</li>

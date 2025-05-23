@@ -3,14 +3,9 @@ import Button from "./Button";
 
 function HeroSection() {
   return (
-    <div className="bg-gray-800 mt-15">
+    <div className="bg-gray-800 mt-15 pb-14">
       <section className="grid grid-cols-1 md:grid-cols-2">
-        {/* <img
-          src="/images/4rz07d.jpg"
-          alt="hero-img"
-          className="w-full h-68 md:h-screen object-cover"
-        ></img>{" "} */}
-        <div className="h-68 md:h-screen text-white grid gap-4 capitalize p-6 md:px-6 md:py-4 md:mt-4">
+        <div className="lg:h-screen text-white grid gap-4 capitalize p-6 md:px-6 md:py-4 md:mt-4">
           <h1 className="text-5xl font-extrabold">
             Your path to <br /> financial success
           </h1>
@@ -22,7 +17,7 @@ function HeroSection() {
             download now
           </button>
         </div>
-        <div className="mt-17 md:mt-0 text-center opacity-80 md:pt-15 grid justify-center gap-3 bg-[url('/images/247872-1920x1080-desktop-full-hd-money-heist-wallpaper-image.jpg')] bg-center bg-cover w-full h-78 md:h-screen">
+        <div className="mt-17 md:mt-0 text-center opacity-80 md:pt-15 grid justify-center gap-3 bg-[url('/images/247872-1920x1080-desktop-full-hd-money-heist-wallpaper-image.jpg')] bg-center bg-cover w-full h-78 lg:h-screen">
           <h1 className="text-gray-700 font-bold text-3xl">
             Get an account that suits you!
           </h1>

@@ -4,7 +4,7 @@ import Button from "./Button";
 function BusinessHero() {
   return (
     <div className="w-full bg-gray-600 mt-15 ">
-      <section className=" text-white grid grid-cols-1 md:grid-cols-2 md:h-screen">
+      <section className=" text-white grid grid-cols-1 md:grid-cols-2 lg:h-screen">
         <div className="grid gap-4 items-center p-8 h-auto">
           <h1 className="text-4xl font-bold font-sans">
             Stay ahead of the curve and in charge of your business, maximise
