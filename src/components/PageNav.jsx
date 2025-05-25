@@ -15,11 +15,11 @@ function PageNav() {
             <li className="text-white hover:text-gray-300">Services</li>
             <li className="text-white hover:text-gray-300">Contact</li>
           </ul> */}
-          <ul className="hidden md:flex md:items-center space-x-6">
-            <li className="text-white hover:text-gray-300 py-2 hover:font-bold">
+          <ul className="hidden md:flex md:items-center space-x-6 active:text-amber-600">
+            <li className="text-white hover:text-gray-300 py-2 hover:font-bold active:text-amber-600">
               <NavLink to="/personal">Personal</NavLink>
             </li>
-            <li className="text-white hover:text-gray-300 py-2  hover:font-bold">
+            <li className="text-white hover:text-gray-300 py-2  hover:font-bold active:text-amber-600">
               <NavLink to="/business">Business</NavLink>
             </li>
             <li className="text-white hover:text-gray-300 py-2  hover:font-bold">
