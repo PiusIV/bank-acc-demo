@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useAmount } from "../contexts/AmountContext";
+import AccountCloseButton from "./AccountCloseButton";
 
 function AccountDetails() {
   const depositRef = useRef();
@@ -7,7 +8,6 @@ function AccountDetails() {
   const loanRef = useRef();
 
   const { dispatch, loan, balance } = useAmount();
-
   // ! handler function logic is handled here due to ref errors
 
   function handleDeposit() {
@@ -96,14 +96,7 @@ function AccountDetails() {
           Pay Loan (${loan.toFixed(2)})
         </button>
       )}
-
-      {/* Close Account */}
-      <button
-        onClick={() => dispatch({ type: "closeAccount" })}
-        className="cursor-pointer w-full px-4 py-2 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors shadow-md mt-4"
-      >
-        Close Account
-      </button>
+      <AccountCloseButton />
     </div>
   );
 }
