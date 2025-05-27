@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 
+const currentYear = new Date().getFullYear();
+
 function Footer() {
   return (
     <>
@@ -48,7 +50,7 @@ function Footer() {
         </div>
       </div>
       <footer className="mx-auto text-center p-6 text-white font-bold bg-gray-800">
-        &copy; Ace Holdings 2025. All Rights Reserved
+        &copy; Ace Holdings {currentYear}. All Rights Reserved
       </footer>
     </>
   );
