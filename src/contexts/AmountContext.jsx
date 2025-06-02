@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useRef } from "react";
 
 // 1) context is created, assigned to a react component
 const AmountContext = createContext();
@@ -41,8 +41,35 @@ function reducer(state, action) {
 
 function AmountProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const depositRef = useRef();
+  const withdrawRef = useRef();
+  const loanRef = useRef();
 
   const { balance, loan, isActive } = state;
+
+  function handleDeposit() {
+    const amount = Number(depositRef.current.value);
+    if (amount > 0) {
+      dispatch({ type: "deposit", payload: amount });
+      depositRef.current.value = "";
+    }
+  }
+
+  function handleWithdraw() {
+    const amount = Number(withdrawRef.current.value);
+    if (amount > 0 && amount <= balance) {
+      dispatch({ type: "withdraw", payload: amount });
+      withdrawRef.current.value = "";
+    }
+  }
+
+  function handleLoanRequest() {
+    const amount = Number(loanRef.current.value);
+    if (amount > 0 && loan === 0) {
+      dispatch({ type: "requestLoan", payload: amount });
+      loanRef.current.value = "";
+    }
+  }
 
   return (
     <AmountContext.Provider
@@ -51,6 +78,12 @@ function AmountProvider({ children }) {
         loan,
         isActive,
         dispatch,
+        handleDeposit,
+        handleLoanRequest,
+        handleWithdraw,
+        loanRef,
+        depositRef,
+        withdrawRef,
       }}
     >
       {children}

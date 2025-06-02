@@ -1,38 +1,19 @@
-import { useRef } from "react";
+// import { useRef } from "react";
 import { useAmount } from "../contexts/AmountContext";
 import AccountCloseButton from "./AccountCloseButton";
 
 function AccountDetails() {
-  const depositRef = useRef();
-  const withdrawRef = useRef();
-  const loanRef = useRef();
-
-  const { dispatch, loan, balance } = useAmount();
+  const {
+    dispatch,
+    loan,
+    handleDeposit,
+    handleLoanRequest,
+    handleWithdraw,
+    loanRef,
+    depositRef,
+    withdrawRef,
+  } = useAmount();
   // ! handler function logic is handled here due to ref errors
-
-  function handleDeposit() {
-    const amount = Number(depositRef.current.value);
-    if (amount > 0) {
-      dispatch({ type: "deposit", payload: amount });
-      depositRef.current.value = "";
-    }
-  }
-
-  function handleWithdraw() {
-    const amount = Number(withdrawRef.current.value);
-    if (amount > 0 && amount <= balance) {
-      dispatch({ type: "withdraw", payload: amount });
-      withdrawRef.current.value = "";
-    }
-  }
-
-  function handleLoanRequest() {
-    const amount = Number(loanRef.current.value);
-    if (amount > 0 && loan === 0) {
-      dispatch({ type: "requestLoan", payload: amount });
-      loanRef.current.value = "";
-    }
-  }
 
   return (
     <div className="space-y-4">
