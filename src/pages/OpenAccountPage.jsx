@@ -8,7 +8,6 @@ import AccountOpenButton from "../components/AccountOpenButton";
 
 function OpenAccountPage() {
   const { isActive } = useAmount();
-  // const { dispatch } = useAmount();
 
   return (
     <>

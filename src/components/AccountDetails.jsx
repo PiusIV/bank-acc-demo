@@ -13,7 +13,6 @@ function AccountDetails() {
     depositRef,
     withdrawRef,
   } = useAmount();
-  // ! handler function logic is handled here due to ref errors
 
   return (
     <div className="space-y-4">
